@@ -1,0 +1,47 @@
+{%extends 'base.html'%}
+<!-- Title block -->
+{%block title%}
+<title>Cupcakes</title>
+{%endblock%}
+<!-- Links block -->
+{%block links%}
+<link rel="stylesheet" href="/static/style.css" />
+{%endblock%}
+<!-- Content block -->
+{%block content%}
+<h1>Cupcakes</h1>
+<ul id="cupcake-list"></ul>
+
+<h2>Add New Cupcake</h2>
+<form action="/api/cupcakes" method="post" id="new-cupcake-form">
+	<div class="input-wrap">
+		<label for="flavor">Flavor:</label>
+		<input type="text" name="flavor" id="flavor-input" required />
+	</div>
+	<div class="input-wrap">
+		<label for="size">Size:</label>
+		<input type="text" name="size" id="size-input" required />
+	</div>
+	<div class="input-wrap">
+		<label for="rating">Rating:</label>
+		<input
+			type="number"
+			name="rating"
+			id="rating-input"
+			min="0"
+			max="10"
+			step="0.1"
+			value="5.0"
+			required
+		/>
+	</div>
+	<div class="input-wrap">
+		<label for="image">Image source:</label>
+		<input type="url" name="image" id="image" />
+	</div>
+	<button type="submit">Submit</button>
+</form>
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.js"></script>
+<script src="/static/script.js"></script>
+{%endblock%}

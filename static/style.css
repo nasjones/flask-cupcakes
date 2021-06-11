@@ -1,0 +1,17 @@
+.cupcake-list-item > img {
+	height: 30vh;
+}
+
+ul {
+	list-style-type: none;
+	padding-inline-start: 0;
+}
+
+.input-wrap {
+	margin-bottom: 2vh;
+}
+
+#new-cupcake-form {
+	border: 2px solid pink;
+	padding: 5px;
+}
